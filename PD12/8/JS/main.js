@@ -1,16 +1,12 @@
-const kuroBakoTalpa = 112; 
-const kuroSanaudosN = 11; 
+const kuroBakas = 112;
+const kuroSanaudos = 11;
 
-let dienos = 0;
-let turimasDegalai = kuroBakoTalpa;
+let days = 0;
+let likoDegalu = kuroBakas;
 
-while (turimasDegalai >= kuroSanaudosN) {
-  dienos++;
-  if (dienos % 2 === 0) {
-    turimasDegalai -= kuroSanaudosN;
-  } else {
-    turimasDegalai -= 2 * kuroSanaudosN;
-  }
+while(likoDegalu >= kuroSanaudos){
+  days++;
+  likoDegalu -= days % 2 === 0 ? kuroSanaudos: 2 * kuroSanaudos;
 }
 
-console.log(`Keliauti bus galima ${dienos} dienas.`);
+console.log(`Keliauti bus galima ${days} dienas.`);
