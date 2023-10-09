@@ -1,16 +1,29 @@
-let a = 1;
-let b = 2;
-let c = 3;
-let sum;
+let a = 40;
+let b = 30;
+let c = 55;
 
-if (a > b && b > c) {
-    sum = a + b;
-} else if (b > c && c > a) {
-    sum = b + c;
-} else if(c > a && a > b) {
-    sum = c + a;
-} else{
-    console.log("Kazkas ne taip")
+if (a >= b && a >= c) {
+  if (b >= c) {
+    let sum = a + b;
+    console.log(sum);
+  } else {
+    let sum = a + c;
+    console.log(sum);
+  }
+} else if (b >= a && b >= c) {
+  if (a >= c) {
+    let sum = b + a;
+    console.log(sum);
+  } else {
+    let sum = b + c;
+    console.log(sum);
+  }
+} else {
+  if (a >= b) {
+    let sum = c + a;
+    console.log(sum);
+  } else {
+    let sum = c + b;
+    console.log(sum);
+  }
 }
-
-console.log(sum);
