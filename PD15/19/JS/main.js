@@ -1,5 +1,13 @@
-const numbers = [5, 9, 6, 3, 7, 5, 1, 2, 4];
+function processArray(array) {
+    array.sort(function(a, b) {
+        return a - b;
+    });
 
-numbers.sort(function (a, b) { return a - b });
+    array.shift();
+    array.shift();
 
-console.log("Third smallest number: " + numbers[2]);
+    console.log(array[0]);
+}
+
+let numbers = [3, 5, 1, 2, 4];
+processArray(numbers);

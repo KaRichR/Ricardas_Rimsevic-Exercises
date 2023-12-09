@@ -1,5 +1,5 @@
 function kopijuotiMasyva(pradinisMasyvas) {
-    return [].concat(pradinisMasyvas);
+    return [...pradinisMasyvas];
 }
 
 let pradinis = [1, 2, 3, 4, 5];

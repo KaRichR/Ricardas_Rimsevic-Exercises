@@ -1,9 +1,12 @@
-function kartojimuSkaicius(masyvas, elementas) {
-    return masyvas.filter(item => item === elementas).length;
+const arr = ['a', 'b', 'a', 'a', 'c', 'c'];
+const count = {};
+
+for (const element of arr) {
+  if (count[element]) {
+    count[element] += 1;
+  } else {
+    count[element] = 1;
+  }
 }
 
-let manoMasyvas = [1, 2, 3, 4, 2, 5, 2, 6, 2, 7];
-let pasirinktasElementas = 2;
-
-let kartojimai = kartojimuSkaicius(manoMasyvas, pasirinktasElementas);
-console.log(`Elementas ${pasirinktasElementas} pasikartoja ${kartojimai} kartus.`);
+console.log(count);

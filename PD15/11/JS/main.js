@@ -1,17 +1,10 @@
 function shuffleArray(array) {
-    let len = array.length,
-        currentIndex;
-    for (currentIndex = len - 1; currentIndex > 0; currentIndex--) {
-        let randIndex = Math.floor(Math.random() * (currentIndex + 1) );
-        var temp = array[currentIndex];
-        array[currentIndex] = array[randIndex];
-        array[randIndex] = temp;
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
 }
-let a = [1,2,3,4,5];
-console.log("Array before Shuffling", a);
 
-console.log("Shuffling array");
-shuffleArray(a);
-
-console.log("Array after Shuffling", a);
+const arr = [1, 2, 3, 4, 5];
+shuffleArray(arr);
+console.log(arr);
