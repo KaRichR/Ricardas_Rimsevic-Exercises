@@ -1,18 +1,17 @@
-let bubbleSort = (inputArr) => {
-    let len = inputArr.length;
-    for (let i = 0; i < len; i++) {
-        for (let j = 0; j < len; j++) {
-            if (inputArr[j] > inputArr[j + 1]) {
-                let tmp = inputArr[j];
-                inputArr[j] = inputArr[j + 1];
-                inputArr[j + 1] = tmp;
+function bubbleSort(arr) {
+    const len = arr.length;
+
+    for (let i = 0; i < len - 1; i++) {
+        for (let j = 0; j < len - 1 - i; j++) {
+            if (arr[j] > arr[j + 1]) {
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
             }
         }
     }
-    return inputArr;
-};
 
-let inputArray = [64, 34, 25, 12, 22, 11, 90];
-let sortedArray = bubbleSort(inputArray);
+    return arr;
+}
 
-console.log("Sorted array:", sortedArray);
+const unsortedArray = [1, 4, 8, 3, 7, 9, 97, 82];
+const sortedArray = bubbleSort(unsortedArray.slice()); 
+console.log(sortedArray); 

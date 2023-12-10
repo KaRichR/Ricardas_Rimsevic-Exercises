@@ -1,27 +1,21 @@
-function generuotiDerinius(zodis) {
-    let deriniai = new Set();
-  
-    function generuoti(likusi, dabartinis) {
-      if (likusi.length === 0) {
-        if (dabartinis !== '') {
-          deriniai.add(dabartinis);
-        }
-        return;
+function generateCombinations(word) {
+  let combinations = new Set();
+
+  function generate(remaining, current) {
+      (remaining.length === 0) && (current !== '') && combinations.add(current);
+
+      for (let i = 0; i < remaining.length; i++) {
+          generate(remaining.slice(0, i) + remaining.slice(i + 1), current + remaining[i]);
+          generate(remaining.slice(0, i) + remaining.slice(i + 1), current);
       }
-  
-      for (let i = 0; i < likusi.length; i++) {
-        generuoti(likusi.slice(0, i) + likusi.slice(i + 1), dabartinis + likusi[i]);
-        generuoti(likusi.slice(0, i) + likusi.slice(i + 1), dabartinis);
-      }
-    }
-  
-    generuoti(zodis, '');
-  
-    return Array.from(deriniai);
   }
-  
-  let zodis = "doga";
-  let visiDeriniai = generuotiDerinius(zodis);
-  
-  console.log('Visi raidiniai deriniai iš žodžio "' + zodis + '":', visiDeriniai);
-  
+
+  generate(word, '');
+
+  return Array.from(combinations);
+}
+
+let word = "cat";
+let allCombinations = generateCombinations(word);
+
+console.log('All letter combinations from the word "' + word + '":', allCombinations);

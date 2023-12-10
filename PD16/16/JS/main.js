@@ -1,21 +1,16 @@
-function isPerfect(number)
-{
-let temp = 0;
-   for(let i = 1; i <= number/2; i++)
-     {
-         if(number % i === 0)
-          {
-            temp += i;
-          }
-     }
-   
-     if(temp === number && temp !== 0)
-        {
-       console.log("It is a perfect number.");
-        } 
-     else
-        {
-       console.log("It is not a perfect number.");
-        }   
- } 
-isPerfect(28); 
+function isPerfect(num) {
+   let sum = 0;
+  
+   for (let i = 1; i < num; i++) {
+      if (num % i === 0) {
+        sum += i;
+      }
+   }
+  
+   return sum === num;
+}
+
+let number = 28;
+let result = isPerfect(number);
+
+console.log(result);

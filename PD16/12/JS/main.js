@@ -1,20 +1,20 @@
-function testPrime(n)
-{
-
-  if (n===1){
-    return false;
-  } else if(n === 2){
-    return true;
-  } else{
-    for(var x = 2; x < n; x++)
-    {
-      if(n % x === 0)
-      {
-        return false;
-      }
-    }
-    return true;  
+function isPrime(number) {
+  if (number <= 1) {
+      return false;
   }
+
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+      if (number % i === 0) {
+          return false;
+      }
+  }
+
+  return true;
 }
 
-console.log(testPrime(8));
+let num = 13;
+if (isPrime(num)) {
+  console.log(num + ' is a prime number.');
+} else {
+  console.log(num + ' is not a prime number.');
+}

@@ -1,15 +1,18 @@
-function ilgiausiasZodis(eilute) {
-    let zodziai = eilute.split(' ');
-  
-    let ilgiausias = zodziai.reduce(function (ilgiausiasZodis, dabartinisZodis) {
-      return dabartinisZodis.length > ilgiausiasZodis.length ? dabartinisZodis : ilgiausiasZodis;
-    }, '');
-  
-    return ilgiausias;
+function findLongestWord(sentence) {
+  const words = sentence.split(' ');
+  let longestWord = '';
+   
+  for (let i = 0; i < words.length; i++) {
+     if (words[i].length > longestWord.length) {
+       longestWord = words[i];
+     }
   }
+   
+  return longestWord;
+ }
   
   let eilute = "Parašykite JavaScript funkciją, kuri suranda ilgiausią žodį pateiktoje eilutėje";
-  let rezultatas = ilgiausiasZodis(eilute);
+  let rezultatas = findLongestWord(eilute);
   
   console.log('Ilgiausias žodis eilutėje:', rezultatas);
   

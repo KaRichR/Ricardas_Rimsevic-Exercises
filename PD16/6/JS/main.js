@@ -1,11 +1,10 @@
-function apverstiSkaiciu(skaicius) {
-    let apverstasSkaicius = parseInt(skaicius.toString().split('').reverse().join(''));
-  
-    return apverstasSkaicius;
-  }
+function reverseNumber(n){
+	n += "";
+	return n.split("").reverse().join("");
+}
   
   let pradinisSkaicius = 12345;
-  let apverstas = apverstiSkaiciu(pradinisSkaicius);
+  let apverstas = reverseNumber(pradinisSkaicius);
   
   console.log('Pradinis skaičius:', pradinisSkaicius);
   console.log('Apverstas skaičius:', apverstas);
