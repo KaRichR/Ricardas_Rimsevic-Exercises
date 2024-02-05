@@ -1,6 +1,5 @@
 const collection = document.getElementById("tevas").children;
-let text = "";
+
 for (let i = 0; i < collection.length; i++) {
-  text += collection[i].tagName + "<br>";
+  console.log("Elementas:", collection[i].tagName);
 }
-document.getElementById("demo").innerHTML = text;

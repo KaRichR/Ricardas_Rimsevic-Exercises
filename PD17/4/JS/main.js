@@ -1,7 +1,8 @@
-document.getElementsByTagName('p')[0].style.color = 'blue';
-
-const paragraph = document.getElementsByTagName('p') 
-
-for (let i = 0; i < paragraph.length; i++) {
-    paragraph[i].style.color = 'blue' 
+function colorParagraphs(color){
+    const paragraphs = document.querySelectorAll('p');
+    paragraphs.forEach(function(paragraph){
+        paragraph.style.color = 'red';
+    })
 };
+
+colorParagraphs();
