@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div id="registration-box">
+        <h2>Registration</h2>
+        <div class="form-row">
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                </div>
+            </div>
+            <div class="form-column" style="margin-left: 10px;">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password">
+                </div>
+            </div>
+        </div>
+        <div class="gender-radio-group">
+            <label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+            <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+            <label for="preferNotToSay"><input type="radio" id="preferNotToSay" name="gender" value="preferNotToSay"> Prefer not to say</label>
+        </div>
+        <button id="register-button">Register</button>
+    </div>
+
+    <script src="JS/main.js"></script>
+</body>
+</html>
