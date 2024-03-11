@@ -1,0 +1,38 @@
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .skill-line {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+  }
+  
+  .skill-box {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    font-weight: bold;
+  }
+  
+  .skill-js {
+    background-color: #f0db4f; 
+  }
+  
+  .skill-html {
+    background-color: #e34c26; 
+  }
+  
+  .skill-css {
+    background-color: #264de4; 
+  }
+  
+  .skill-react {
+    background-color: #61dafb; 
+  }
+  
