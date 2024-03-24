@@ -1,0 +1,14 @@
+.App {
+  display: flex;
+}
+
+.left-panel {
+  margin-right: 100px;
+  font-family: Arial, sans-serif;
+}
+
+.right-panel {
+  width: 300px; 
+  margin-left: 10px; 
+  font-family: Arial, sans-serif; 
+}
